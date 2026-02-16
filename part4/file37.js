@@ -1,0 +1,13 @@
+let str="Hello World"
+console.log(str.toUpperCase())
+console.log(str.toLowerCase())
+console.log(str.indexOf("1"))
+console.log(str.lastIndexOf("1"))
+console.log(str.includes("W"))
+console.log(str.startsWith("H"))
+console.log(str.endsWith("d"))
+console.log(str.slice(1,4))
+console.log(str.substring(1,9))
+
+
+
