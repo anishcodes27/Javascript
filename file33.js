@@ -12,3 +12,4 @@
 
 
 const {name,age}=student
+
