@@ -6,21 +6,30 @@ const students = [
 function getStudentInfo(id) {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
-      resolve("Student Info");
+        const found =students.find((student)=>student.id===id);
+        if(found)resolve("Student Info");
+        else reject ("Student does not Exist");
     }, 2000);
   });
 }
+
 function getExamInfo(id) {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
-      resolve("Exam Info Resolved");
+      const found =students.find((student)=>student.id===id && student.score>80);
+      if(found)resolve("Exam Info Resolved");
+      else reject ("Score too low");
+      
     }, 3000);
   });
 }
+
 function getAttendanceInfo(id) {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
-      resolve("Attendance Info Resolved");
+      const found =students.find((student)=>student.id===id && student.score>75);
+      if(found)resolve("Attendance Info Resolved");
+      else reject ("Attendance too low");
     }, 1000);
   });
 }
@@ -38,4 +47,6 @@ async function main() {
     console.log(err);
   }
 }
+
+
 main();
